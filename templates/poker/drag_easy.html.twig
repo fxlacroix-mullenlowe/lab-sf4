@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>Drag cards easy</h2>
+    <div class="drag-poker-easy row" style="padding-left: 200px;">
+        <div class="row">
+
+            {% for card in poker.cards.package %}
+                <div id="card-container-{{ loop.index }}" class="card-container">
+                    <div class="card {{ card }}" attr-value="{{ card }}"></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

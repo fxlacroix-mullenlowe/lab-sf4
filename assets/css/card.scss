@@ -1,0 +1,324 @@
+$rotate: 10deg;
+$x: 90px;
+$y: $x/18;
+
+h2{
+    //background: black;
+    //color: white;
+}
+
+// base card
+.card{
+    width: 98px;
+    height: 144px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: url(/build/images/jeu-carte-1280x715.png) -197px -572px;
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+}
+
+.card-right{
+}
+
+.card-right-cut{
+}
+
+.package .card{
+    width: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.package .total-card{
+    width: 98px;
+    height: 144px;
+}
+
+@for $i from 1 through 54 {
+    .shift-#{$i} {
+       position: relative;
+       right: $i * 20px;
+       width: 20px;
+    }
+}
+
+.in-hand-1{
+    -webkit-transform: rotate(-$rotate);
+    -moz-transform: rotate(-$rotate);
+    -o-transform: rotate(-$rotate);
+    -ms-transform: rotate(-$rotate);
+    transform: rotate(-$rotate);
+}
+
+.in-hand-2{
+    position: relative;
+    right: $x;
+    top: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.in-hand-3{
+    position: relative;
+    right: $x *2;
+    top: $y;
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+.in-hand-4{
+    position: relative;
+    right: $x *3;
+    top: $y * 2;
+    -webkit-transform: rotate( $rotate * 2);
+    -moz-transform: rotate($rotate * 2);
+    -o-transform: rotate($rotate * 2);
+    -ms-transform: rotate($rotate * 2);
+    transform: rotate($rotate * 2);
+}
+
+.in-hand-5{
+    position: relative;
+    right: $x *4;
+    top: $y * 4;
+    -webkit-transform: rotate($rotate * 3);
+    -moz-transform: rotate($rotate * 3);
+    -o-transform: rotate($rotate * 3);
+    -ms-transform: rotate($rotate * 3);
+    transform: rotate($rotate * 3);
+}
+
+// back card
+.back{
+    background: url(/build/images/jeu-carte-1280x715.png) -197px -572px;
+}
+
+// joker
+.joker-1{
+    background: url(/build/images/jeu-carte-1280x715.png) 0 -572px;
+}
+
+.joker-2{
+    background: url(/build/images/jeu-carte-1280x715.png) -98px -572px;
+}
+
+// pique
+.spade-1{
+    background: url(/build/images/jeu-carte-1280x715.png) 0 -429px;
+}
+
+.spade-2{
+    background: url(/build/images/jeu-carte-1280x715.png) -98px -429px;
+}
+
+.spade-3{
+    background: url(/build/images/jeu-carte-1280x715.png) -197px -429px;
+}
+
+.spade-4{
+    background: url(/build/images/jeu-carte-1280x715.png) -295px -429px;
+}
+
+.spade-5{
+    background: url(/build/images/jeu-carte-1280x715.png) -394px -429px;
+}
+
+.spade-6{
+    background: url(/build/images/jeu-carte-1280x715.png) -492px -429px;
+}
+
+.spade-7{
+    background: url(/build/images/jeu-carte-1280x715.png) -591px -429px;
+}
+
+.spade-8{
+    background: url(/build/images/jeu-carte-1280x715.png) -689px -429px;
+}
+
+.spade-9{
+    background: url(/build/images/jeu-carte-1280x715.png) -788px -429px;
+}
+
+.spade-10{
+    background: url(/build/images/jeu-carte-1280x715.png) -886px -429px;
+}
+
+.spade-j, .spade-11{
+    background: url(/build/images/jeu-carte-1280x715.png) -985px -429px;
+}
+
+.spade-q, .spade-12{
+    background: url(/build/images/jeu-carte-1280x715.png) -1083px -429px;
+}
+
+.spade-k, .spade-13{
+    background: url(/build/images/jeu-carte-1280x715.png) -1181px -429px;
+}
+
+
+// carreau
+.diamond-1{
+    background: url(/build/images/jeu-carte-1280x715.png) 0 -143px;
+}
+
+.diamond-2{
+    background: url(/build/images/jeu-carte-1280x715.png) -98px -143px;
+}
+
+.diamond-3{
+    background: url(/build/images/jeu-carte-1280x715.png) -197px -143px;
+}
+
+.diamond-4{
+    background: url(/build/images/jeu-carte-1280x715.png) -295px -143px;
+}
+
+.diamond-5{
+    background: url(/build/images/jeu-carte-1280x715.png) -394px -143px;
+}
+
+.diamond-6{
+    background: url(/build/images/jeu-carte-1280x715.png) -492px -143px;
+}
+
+.diamond-7{
+    background: url(/build/images/jeu-carte-1280x715.png) -591px -143px;
+}
+
+.diamond-8{
+    background: url(/build/images/jeu-carte-1280x715.png) -689px -143px;
+}
+
+.diamond-9{
+    background: url(/build/images/jeu-carte-1280x715.png) -788px -143px;
+}
+
+.diamond-10{
+    background: url(/build/images/jeu-carte-1280x715.png) -886px -143px;
+}
+
+.diamond-j, .diamond-11{
+    background: url(/build/images/jeu-carte-1280x715.png) -985px -143px;
+}
+
+.diamond-q, .diamond-12{
+    background: url(/build/images/jeu-carte-1280x715.png) -1083px -143px;
+}
+
+.diamond-k, .diamond-13{
+    background: url(/build/images/jeu-carte-1280x715.png) -1181px -143px;
+}
+
+// coeur
+.heart-1{
+    background: url(/build/images/jeu-carte-1280x715.png) 0 -286px;
+}
+
+.heart-2{
+    background: url(/build/images/jeu-carte-1280x715.png) -98px -286px;
+}
+
+.heart-3{
+    background: url(/build/images/jeu-carte-1280x715.png) -197px -286px;
+}
+
+.heart-4{
+    background: url(/build/images/jeu-carte-1280x715.png) -295px -286px;
+}
+
+.heart-5{
+    background: url(/build/images/jeu-carte-1280x715.png) -394px -286px;
+}
+
+.heart-6{
+    background: url(/build/images/jeu-carte-1280x715.png) -492px -286px;
+}
+
+.heart-7{
+    background: url(/build/images/jeu-carte-1280x715.png) -591px -286px;
+}
+
+.heart-8{
+    background: url(/build/images/jeu-carte-1280x715.png) -689px -286px;
+}
+
+.heart-9{
+    background: url(/build/images/jeu-carte-1280x715.png) -788px -286px;
+}
+
+.heart-10{
+    background: url(/build/images/jeu-carte-1280x715.png) -886px -286px;
+}
+
+.heart-j, .heart-11{
+    background: url(/build/images/jeu-carte-1280x715.png) -985px -286px;
+}
+
+.heart-q, .heart-12{
+    background: url(/build/images/jeu-carte-1280x715.png) -1083px -286px;
+}
+
+.heart-k, .heart-13{
+    background: url(/build/images/jeu-carte-1280x715.png) -1181px -286px;
+}
+
+
+// trefle
+.club-1{
+    background: url(/build/images/jeu-carte-1280x715.png) 0 0;
+}
+
+.club-2{
+    background: url(/build/images/jeu-carte-1280x715.png) -98px 0;
+}
+
+.club-3{
+    background: url(/build/images/jeu-carte-1280x715.png) -197px 0;
+}
+
+.club-4{
+    background: url(/build/images/jeu-carte-1280x715.png) -295px 0;
+}
+
+.club-5{
+    background: url(/build/images/jeu-carte-1280x715.png) -394px 0;
+}
+
+.club-6{
+    background: url(/build/images/jeu-carte-1280x715.png) -492px 0;
+}
+
+.club-7{
+    background: url(/build/images/jeu-carte-1280x715.png) -591px 0;
+}
+
+.club-8{
+    background: url(/build/images/jeu-carte-1280x715.png) -689px 0;
+}
+
+.club-9{
+    background: url(/build/images/jeu-carte-1280x715.png) -788px 0;
+}
+
+.club-10{
+    background: url(/build/images/jeu-carte-1280x715.png) -886px 0;
+}
+
+.club-j, .club-11{
+    background: url(/build/images/jeu-carte-1280x715.png) -985px 0;
+}
+
+.club-q, .club-12{
+    background: url(/build/images/jeu-carte-1280x715.png) -1083px 0;
+}
+
+.club-k, .club-13{
+    background: url(/build/images/jeu-carte-1280x715.png) -1181px 0;
+}

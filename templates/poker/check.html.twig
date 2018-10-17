@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>What is this game ?</h2><br />
+    <div class="check-poker row" style="padding-left: 200px;">
+        {% for player in poker.players %}
+            {% for card in player.cards %}
+                <div class="game{{ loop.index }}" style="margin-bottom: 50px;">
+                    <div class="card in-hand-{{ loop.index }} {{ card }}" attr-value="{{ card }}"></div>
+                </div>
+            {% endfor %}
+            <br />
+        {% endfor %}
+    </div>
+
+    <div class="label-game1" style="position: relative; bottom: 550px; left: 30px; font-weight: bold;">{{ poker.players.0.game }}</div>
+    <div class="label-game1" style="position: relative; bottom: 370px; left: 30px; font-weight: bold;">{{ poker.players.2.game }}</div>
+    <div class="label-game1" style="position: relative; bottom: 160px; left: 30px; font-weight: bold;">{{ poker.players.4.game }}</div>
+    <div class="label-game1" style="position: relative; bottom: 650px; left: 620px; font-weight: bold;">{{ poker.players.1.game }}</div>
+    <div class="label-game1" style="position: relative; bottom: 450px; left: 620px; font-weight: bold;">{{ poker.players.3.game }}</div>
+
+{% endblock %}
