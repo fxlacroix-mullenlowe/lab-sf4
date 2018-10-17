@@ -13,6 +13,7 @@ require('../css/card.scss');
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 var $ = require('jquery');
 require('jquery-ui-bundle');
+require('bootstrap');
 
 // utility function
 var tools = require('./tools');
