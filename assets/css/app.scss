@@ -24,22 +24,3 @@ label.required{
     color: white;
     padding: 10px;
 }
-
-/*
-
-
-@for $i from 0 through 12 {
-    .spade-#{$i + 1} {
-        background: url(/build/images/jeu-carte-1280x715.png) -#{1 + $i * $cardSize}px (-429px);
-    }
-    .diamond-#{$i + 1} {
-        background: url(/build/images/jeu-carte-1280x715.png) -#{2 + $i * $cardSize}px (-143px);
-    }
-    .heart-#{$i + 1} {
-        background: url(/build/images/jeu-carte-1280x715.png) -#{3 + $i * $cardSize}px (-286px);
-    }
-    .club-#{$i + 1} {
-        background: url(/build/images/jeu-carte-1280x715.png) -#{4 + $i * $cardSize}px 0;
-    }
-}
- */

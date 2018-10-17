@@ -5,15 +5,14 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
-// any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.scss');
-require('../css/card.scss');
-
-
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 var $ = require('jquery');
 require('jquery-ui-bundle');
 require('bootstrap');
+
+// any CSS you require will output into a single css file (app.css in this case)
+require('../css/app.scss');
+require('../css/card.scss');
 
 // utility function
 var tools = require('./tools');
@@ -22,20 +21,6 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
-if($(".drag-poker-hard").length){
-
-    $( ".card" ).draggable({
-        snap: ".in-hand",
-        //revert : true
-    });
-    $('#drop').droppable({
-
-        drop : function(){
-            alert('Action terminée !'); // cette alerte s'exécutera une fois le bloc déposé
-        }
-
-    });
-}
 
 if($(".drag-poker-easy ").length){
 
@@ -77,5 +62,22 @@ if($(".drag-poker-easy ").length){
     });
     */
 
+}
+
+
+
+if($(".drag-poker-hard").length){
+
+    $( ".card" ).draggable({
+        snap: ".in-hand",
+        //revert : true
+    });
+    $('#drop').droppable({
+
+        drop : function(){
+            alert('Action terminée !'); // cette alerte s'exécutera une fois le bloc déposé
+        }
+
+    });
 }
 
