@@ -4,13 +4,13 @@
 
     <h2>Drag cards easy</h2>
     <div class="drag-poker-easy row" style="padding-left: 200px;">
-        <div class="row cards-sortable">
+        <ul class="row cards-sortable">
             {% for card in poker.cards.package|slice(0, 10) %}
                 <!--div id="card-container-{{ loop.index }}" class="card-container"-->
-                    <div id="card-{{ loop.index }}" class="card {{ card }}" attr-value="{{ card }}"></div>
+                    <li id="card-{{ loop.index }}" class="card {{ card }}" attr-value="{{ card }}"></li>
                 <!--/-div-->
             {% endfor %}
-        </div>
+        </ul>
     </div>
 
 

@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="{{ asset('build/app.css') }}">
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body id="{{ app.request.uri|replace({'http://www.lab.com/': "page-", "/": "-"})  }}">
         <div class="container-fluid">
-                    {% block body %}{% endblock %}
+            {% block body %}{% endblock %}
         </div>
         <script src="{{ asset('build/app.js') }}"></script>
         {% block javascripts %}{% endblock %}

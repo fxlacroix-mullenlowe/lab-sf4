@@ -13,12 +13,12 @@ class Card
     public function generatePackage()
     {
         foreach(self::COLORS as $color)
+    {
+        foreach(self::VALUES as $value)
         {
-            foreach(self::VALUES as $value)
-            {
-                $this->package[] = sprintf('%s-%s', $color, $value);
-            }
+            $this->package[] = sprintf('%s-%s', $color, $value);
         }
+    }
 
         return $this;
     }
