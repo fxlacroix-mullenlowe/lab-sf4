@@ -1,20 +1,17 @@
 <?php
 
-namespace App\Entity\Poker;
+namespace App\Entity\Game\Card;
 
 class Card
 {
     const MIN_CUT   = 1;
     const TOTAL     = 56;
     const COLORS    = ['spade', 'heart', 'diamond', 'club'];
-    const VALUES    = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'];
-
+    const VALUES    = [/*'1', */'2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'];
     public $package;
 
     public function generatePackage()
     {
-
-
         foreach(self::COLORS as $color)
         {
             foreach(self::VALUES as $value)

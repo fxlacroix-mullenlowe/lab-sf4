@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Jeux de carte</h2>
+    <div class="row">
+        <ul>
+            <li><a href="{{ path('card_universe') }}">Universe</a></li>
+            <li><a href="{{ path('card_check') }}">What is my game (poker) ?</a></li>
+            <li><a href="{{ path('card_drag_easy') }}">Drag cards (easy flat)</a></li>
+            <li><a href="{{ path('card_drag_hard') }}">Drag cards (hard in hand)</a></li>
+            <li><a href="{{ path('game_battle') }}">battle</a></li>
+        </ul>
+    </div>
+{% endblock %}

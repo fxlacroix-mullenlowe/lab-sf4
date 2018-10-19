@@ -7,5 +7,4 @@ module.exports = {
         var finish = txtarea.selectionEnd;
         return txtarea.value.substring(start, finish);
     }
-
 };

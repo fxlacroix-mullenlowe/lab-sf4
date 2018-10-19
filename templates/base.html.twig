@@ -9,11 +9,7 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
                     {% block body %}{% endblock %}
-                </div>
-            </div>
         </div>
         <script src="{{ asset('build/app.js') }}"></script>
         {% block javascripts %}{% endblock %}

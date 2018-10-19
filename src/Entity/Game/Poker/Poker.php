@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Entity\Poker;
+namespace App\Entity\Game\Poker;
+
+use App\Entity\Game\Card\Card;
 
 class Poker
 {

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h3>Battle</h3>
+
+    <div id="game_battle" class="row" style="padding: 20px;">
+        <div class="col-md-1 package game1" style="margin-left: 150px;">
+            {% for card in cards.package %}
+                <div class="card" attr-value="{{ card }}"></div>
+            {% endfor %}
+        </div>
+        <div class="container-battle col-md-5">
+
+            <div class="card-1"></div>
+            <div class="card-2"></div>
+
+        </div>
+        <div class="col-md-1 package game2">
+            {% for card in cards.package|reverse %}
+                <div class="card" attr-value="{{ card }}"></div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

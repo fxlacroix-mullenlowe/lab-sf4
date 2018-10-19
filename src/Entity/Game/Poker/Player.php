@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Entity\Poker;
+namespace App\Entity\Game\Poker;
 
 
 class Player

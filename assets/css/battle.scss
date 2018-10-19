@@ -1,0 +1,26 @@
+body{
+    //background: url(/build/images/carpet.jpg);
+    background: rgba(76, 175, 80, 0.6);
+}
+
+.game2{
+    margin-top: 40%;
+}
+
+.container-battle{
+    position: relative;
+}
+
+.container-battle .card-1{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    overflow: hidden;
+}
+
+.container-battle .card-2{
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+    overflow: hidden;
+}

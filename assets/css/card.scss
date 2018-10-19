@@ -2,14 +2,9 @@ $rotate: 10deg;
 $x: 90px;
 $y: $x/18;
 
-h2{
-    //background: black;
-    //color: white;
-}
-
 // base card
 .card{
-    width: 98px;
+    width: 99px;
     height: 144px;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -18,81 +13,28 @@ h2{
     box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
 }
 
-.card-right{
-}
-
-.card-right-cut{
+.package{
+    position: relative;
+    margin-bottom: 150px;
+    display: block;
 }
 
 .package .card{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.rolling .cut-card{
     width: 20px;
     margin-bottom: 0px;
     margin-left: 0px;
 }
 
-.package .total-card{
-    width: 98px;
+.rolling .total-card{
+    width: 99px;
     height: 144px;
-}
-
-@for $i from 1 through 54 {
-    .shift-#{$i} {
-       position: relative;
-       right: $i * 20px;
-       width: 20px;
-    }
-}
-
-.in-hand-1{
-    -webkit-transform: rotate(-$rotate);
-    -moz-transform: rotate(-$rotate);
-    -o-transform: rotate(-$rotate);
-    -ms-transform: rotate(-$rotate);
-    transform: rotate(-$rotate);
-}
-
-.in-hand-2{
-    position: relative;
-    right: $x;
-    top: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-
-.in-hand-3{
-    position: relative;
-    right: $x *2;
-    top: $y;
-    -webkit-transform: rotate($rotate);
-    -moz-transform: rotate($rotate);
-    -o-transform: rotate($rotate);
-    -ms-transform: rotate($rotate);
-    transform: rotate($rotate);
-}
-
-.in-hand-4{
-    position: relative;
-    right: $x *3;
-    top: $y * 2;
-    -webkit-transform: rotate( $rotate * 2);
-    -moz-transform: rotate($rotate * 2);
-    -o-transform: rotate($rotate * 2);
-    -ms-transform: rotate($rotate * 2);
-    transform: rotate($rotate * 2);
-}
-
-.in-hand-5{
-    position: relative;
-    right: $x *4;
-    top: $y * 4;
-    -webkit-transform: rotate($rotate * 3);
-    -moz-transform: rotate($rotate * 3);
-    -o-transform: rotate($rotate * 3);
-    -ms-transform: rotate($rotate * 3);
-    transform: rotate($rotate * 3);
+    margin-left: 0px;
 }
 
 // back card
@@ -110,7 +52,7 @@ h2{
 }
 
 // pique
-.spade-1{
+.spade-1, .spade-14{
     background: url(/build/images/jeu-carte-1280x715.png) 0 -429px;
 }
 
@@ -164,7 +106,7 @@ h2{
 
 
 // carreau
-.diamond-1{
+.diamond-1, diamond-14{
     background: url(/build/images/jeu-carte-1280x715.png) 0 -143px;
 }
 
@@ -217,7 +159,7 @@ h2{
 }
 
 // coeur
-.heart-1{
+.heart-1, heart-14{
     background: url(/build/images/jeu-carte-1280x715.png) 0 -286px;
 }
 
@@ -271,7 +213,7 @@ h2{
 
 
 // trefle
-.club-1{
+.club-1, club-14{
     background: url(/build/images/jeu-carte-1280x715.png) 0 0;
 }
 
@@ -321,4 +263,65 @@ h2{
 
 .club-k, .club-13{
     background: url(/build/images/jeu-carte-1280x715.png) -1181px 0;
+}
+
+
+@for $i from 1 through 54 {
+    .shift-#{$i} {
+        position: relative;
+        right: $i * 20px;
+        width: 20px;
+    }
+}
+
+.in-hand-1{
+    -webkit-transform: rotate(-$rotate);
+    -moz-transform: rotate(-$rotate);
+    -o-transform: rotate(-$rotate);
+    -ms-transform: rotate(-$rotate);
+    transform: rotate(-$rotate);
+}
+
+.in-hand-2{
+    position: relative;
+    right: $x;
+    top: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.in-hand-3{
+    position: relative;
+    right: $x *2;
+    top: $y;
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+.in-hand-4{
+    position: relative;
+    right: $x *3;
+    top: $y * 2;
+    -webkit-transform: rotate( $rotate * 2);
+    -moz-transform: rotate($rotate * 2);
+    -o-transform: rotate($rotate * 2);
+    -ms-transform: rotate($rotate * 2);
+    transform: rotate($rotate * 2);
+}
+
+.in-hand-5{
+    position: relative;
+    right: $x *4;
+    top: $y * 4;
+    -webkit-transform: rotate($rotate * 3);
+    -moz-transform: rotate($rotate * 3);
+    -o-transform: rotate($rotate * 3);
+    -ms-transform: rotate($rotate * 3);
+    transform: rotate($rotate * 3);
 }

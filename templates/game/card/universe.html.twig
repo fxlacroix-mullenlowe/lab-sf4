@@ -2,30 +2,36 @@
 
 {% block body %}
     <h2>Universe</h2>
-    <div class="universe-poker row package">
+    <h3>Cards package</h3>
+    <div class="row package">
+        {% for card in poker.cards.package %}
+            <div class="card" attr-value="{{ card }}"></div>
+        {% endfor %}
+    </div>
+
+    <h3>Cards Calibration</h3>
+    <div class="row rolling">
         {% for card in poker.cards.package %}
             {% if loop.last %}
                 <div class="card total-card" attr-value="{{ card }}"></div>
             {% else %}
-                <div class="card" attr-value="{{ card }}"></div>
+                <div class="card cut-card" attr-value="{{ card }}"></div>
             {% endif %}
         {% endfor %}
     </div>
     <br />
-
-    <h2>Cards package</h2>
-    <div class="row package">
+    <div class="row rolling">
         {% for card in poker.cards.package %}
             {% if loop.last %}
                 <div class="card total-card {{ card }}" attr-value="{{ card }}"></div>
             {% else %}
-                <div class="card {{ card }}" attr-value="{{ card }}"></div>
+                <div class="card cut-card {{ card }}" attr-value="{{ card }}"></div>
             {% endif %}
         {% endfor %}
     </div>
     <br />
 
-    <h2>Cards in hand</h2>
+    <h3>Cards in hand</h3>
     <div class="row">
         {% for card in poker.cards.package|slice(1, 5) %}
             <div class="card in-hand-{{ loop.index }} {{ card }}" attr-value="{{ card }}"></div>
@@ -37,7 +43,7 @@
 
     <br /><br />
 
-    <h2>Listing</h2>
+    <h3>Listing</h3>
     <div class="row">
     {% for card in poker.cards.package %}
         <div class="card {{ card }}" attr-value="{{ card }}"></div>
