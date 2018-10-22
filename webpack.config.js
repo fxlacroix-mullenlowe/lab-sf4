@@ -18,13 +18,13 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
-    .addEntry('app', './assets/js/app.js')
+    .addEntry('bootstrap', './assets/js/bootstrap.js')
+    .addEntry('react', './assets/js/react.js')
+    .addEntry('vue', './assets/js/vue.js')
+    .addEntry('angular', './assets/js/angular.js')
     .addPlugin(new CopyWebpackPlugin([
         { from: './assets/images', to: 'images' }
     ]))
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
-
     /*
      * FEATURE CONFIG
      *
@@ -46,6 +46,9 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
+    .enableVueLoader()
+    .enableReactPreset()
+    .enableTypeScriptLoader()
 ;
 
 module.exports = Encore.getWebpackConfig();

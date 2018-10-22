@@ -1,4 +1,4 @@
-
+// mix function added to array prototype
 Array.prototype.shuffle = function () {
 
     var ctr = this.length, temp, index;
