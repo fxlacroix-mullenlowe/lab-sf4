@@ -18,8 +18,8 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
-    .addEntry('bootstrap', './assets/js/bootstrap.js')
-    .addEntry('react', './assets/js/react.js')
+    .addEntry('jquery', './assets/js/jquery.js')
+    .addEntry('react', ['babel-polyfill','./assets/js/react.js'])
     .addEntry('vue', './assets/js/vue.js')
     .addEntry('angular', './assets/js/angular.js')
     .addPlugin(new CopyWebpackPlugin([
@@ -37,7 +37,9 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
-
+    .configureBabel(function(babelConfig) {
+        babelConfig.presets.push('env');
+    })
     // enables Sass/SCSS support
     .enableSassLoader()
 
