@@ -7,9 +7,7 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body id="{{ app.request.uri|replace({'http://www.lab.com/': "page-", "/": "-"})  }}">
-        <div class="container-fluid">
-            {% block body %}{% endblock %}
-        </div>
+        <div id="root"></div>
         <script src="{{ asset('build/vue.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>

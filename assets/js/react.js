@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BasicNavBar from './component/react/navbar';
-import Jumbotron from './component/react/jumbotron';
-import Heading from './component/react/heading';
+import BasicNavBar from './component/react/BasicNavbar';
+import Jumbotron from './component/react/Jumbotron';
+import Heading from './component/react/Heading';
 
 class App extends React.Component {
     render() {
