@@ -6,16 +6,6 @@
                 <Jumbotron />
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <Heading />
-            </div>
-            <div class="col-md-4">
-                <Heading />
-            </div>
-            <div class="col-md-4">
-                <Heading />
-            </div>
         </div>
     </div>
 </template>
@@ -24,7 +14,6 @@
     import Jumbotron from './Jumbotron';
     import BasicNavBar from './BasicNavBar';
     import Heading from './Heading';
-
     export default {
         components: {
             Jumbotron,

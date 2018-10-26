@@ -13,8 +13,8 @@ require('bootstrap');
 require('./utils/prototype');
 require('./utils/function');
 require('./utils/tool');
-require('./component/jquery/analyzer/analyzer');
-require('./component/jquery/card/battle');
+require('./jquery/analyzer/analyzer');
+require('./jquery/card/battle');
 
 const Package = require('./component/jquery/card/package');
 
