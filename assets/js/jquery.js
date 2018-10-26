@@ -10,9 +10,9 @@ require('jquery-ui-bundle');
 require('bootstrap');
 
 // JS
-require('./component/utils/prototype');
-require('./component//utils/function');
-require('./component/utils/tool');
+require('./utils/prototype');
+require('./utils/function');
+require('./utils/tool');
 require('./component/jquery/analyzer/analyzer');
 require('./component/jquery/card/battle');
 
