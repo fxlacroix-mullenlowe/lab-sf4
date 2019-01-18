@@ -5,11 +5,13 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-
+/**
+ * @Route("/api/", options = { "expose" = true })
+ */
 class ApiController
 {
     /**
-     * @Route("/api/get/firstname", methods={"GET","HEAD"})
+     * @Route("/get/firstname", methods={"GET","HEAD"})
      */
     public function getFirstname()
     {

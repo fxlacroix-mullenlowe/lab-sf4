@@ -7253,6 +7253,13 @@ vue@^2.5.17:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
   integrity sha512-mFbcWoDIJi0w0Za4emyLiW72Jae0yjANHbCVquMKijcavBGypqlF7zHRgMa5k4sesdv7hv2rB4JPdZfR+TPfhQ==
 
+vuesax@^3.5.8:
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/vuesax/-/vuesax-3.5.8.tgz#0bc5ebac42e1236cb22f6aaccfa2dba20b26c754"
+  integrity sha512-LuPhAR4HjGLizwIi+DarZjI3v39zWNDCtI+1wUV4xGPL5Be5j4qnLykxA/ykNgUVvaaaBf5abqjLQVPkh6RSsA==
+  dependencies:
+    vue "^2.5.17"
+
 warning@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"

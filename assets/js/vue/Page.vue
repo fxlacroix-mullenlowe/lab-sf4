@@ -3,9 +3,15 @@
         <div class="row">
             <div class="col-md-12">
                 <BasicNavBar />
+            </div>
+            <div class="col-md-9">
                 <Jumbotron />
             </div>
-        </div>
+            <div class="col-md-3">
+                <SideBar />
+            </div>
+            <div class="col-md-1">
+            </div>
         </div>
     </div>
 </template>
@@ -14,43 +20,13 @@
     import Jumbotron from './Jumbotron';
     import BasicNavBar from './BasicNavBar';
     import Heading from './Heading';
+    import SideBar from './SideBar';
     export default {
         components: {
             Jumbotron,
             BasicNavBar,
-            Heading
-        },
-        data() {
-            return {
-                firstname: null,
-                counter: 0,
-                show: false
-            };
-        },
-        methods: {
-            say(name) {
-                alert(name + ' ' + this.firstname);
-            },
-            addPoint() {
-                var waiting = document.querySelector('.waiting');
-                waiting.innerText += '.';
-            },
-            updateFirstname(firstname) {
-                this.firstname = firstname;
-                this.show = true;
-            }
-        },
-        created() {
-            fetch('/api/get/firstname')
-                .then((response) => response.json())
-                .then(function(data) {
-                    var self = this;
-                    var interval = setInterval(self.addPoint, 500);
-                    setTimeout(function() {
-                        self.updateFirstname(data.firstname)
-                        clearInterval(interval);
-                    }, 2000);
-                }.bind(this));
+            Heading,
+            SideBar
         }
     };
 </script>

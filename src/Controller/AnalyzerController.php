@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
 /**
- * @Route("/analyzer")
+ * @Route("/analyzer", options = { "expose" = true })
  */
 class AnalyzerController
 {

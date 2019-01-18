@@ -8,10 +8,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/game/battle", options={"expose" = true}, name="game_battle")
+ */
 class BattleController
 {
     /**
-     * @Route("/game/battle", name="game_battle")
+     * @Route("/", name="game_battle")
      */
     public function battle(Environment $twig)
     {

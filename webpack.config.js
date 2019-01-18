@@ -21,6 +21,7 @@ Encore
     .addEntry('jquery', './assets/js/jquery.js')
     .addEntry('react', ['babel-polyfill','./assets/js/react.js'])
     .addEntry('vue', './assets/js/vue.js')
+    .addEntry('vuesax', './assets/js/vuesax.js')
     //.addEntry('angular', './assets/js/angular.js')
     .addPlugin(new CopyWebpackPlugin([
         { from: './assets/images', to: 'images' }

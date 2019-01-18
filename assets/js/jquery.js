@@ -16,7 +16,7 @@ require('./utils/tool');
 require('./jquery/analyzer/analyzer');
 require('./jquery/card/battle');
 
-const Package = require('./component/jquery/card/package');
+const Package = require('./jquery/card/package');
 
 var packages = new Package();
 console.log(packages.generatePackage().mix());

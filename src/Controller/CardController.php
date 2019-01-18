@@ -8,11 +8,13 @@ use Twig\Environment;
 use App\Entity\Game\Poker\Poker;
 use App\Entity\Game\Poker\Player;
 
-
+/**
+ * @Route("/card", options={"expose" = true})
+ */
 class CardController
 {
     /**
-     * @Route("/card/drag/easy", name="card_drag_easy")
+     * @Route("/drag/easy", name="card_drag_easy")
      */
     public function dragEasy(Environment $twig)
     {
@@ -25,7 +27,7 @@ class CardController
     }
 
     /**
-     * @Route("/card/drag/hard", name="card_drag_hard")
+     * @Route("/drag/hard", name="card_drag_hard")
      */
     public function dragHard(Environment $twig)
     {
@@ -38,7 +40,7 @@ class CardController
     }
 
     /**
-     * @Route("/card/check", name="card_check")
+     * @Route("/check", name="card_check")
      */
     public function check(Environment $twig)
     {
@@ -53,7 +55,7 @@ class CardController
     }
 
     /**
-     * @Route("/card/universe", name="card_universe")
+     * @Route("/universe", name="card_universe")
      */
     public function universe(Environment $twig)
     {
@@ -66,7 +68,7 @@ class CardController
     }
 
     /**
-     * @Route("/card", name="home_card")
+     * @Route("/", name="home_card")
      */
     public function poker(Environment $twig)
     {

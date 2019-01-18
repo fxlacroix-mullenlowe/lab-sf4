@@ -1,18 +1,31 @@
 <template>
     <div class="jumbotron">
-        <h2>
-            Hello, world!
-        </h2>
-        <p>
-            This is a template for a simple marketing or informational website. It includes a
-            large callout called the hero unit and three supporting pieces of content. Use it as
-            a starting point to create something more unique.
-        </p>
-        <p>
-            <a class="btn btn-primary btn-large" href="#">Learn more</a>
-        </p>
+        <div v-if="loading">
+            <img src="../../images/loader-3.gif"/>
+        </div>
+        <span v-html="data.content"></span>
     </div>
 </template>
+
 <script>
-    export default {}
+    import Routing from '../utils/Routing';
+
+    export default {
+        data() {
+            return {
+                data: '',
+                loading: false
+            };
+        },
+        methods: {},
+        created() {
+            this.loading = true;
+            fetch(Routing.generate("vue_home"))
+                .then((response) => response.json())
+                .then(function(data) {
+                    this.data = data;
+                    this.loading = false;
+                }.bind(this));
+        }
+    };
 </script>
