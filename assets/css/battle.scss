@@ -1,26 +1,82 @@
-body#page-game-battle{
-    //background: url(/build/images/carpet.jpg);
-    background: rgba(76, 175, 80, 0.6);
-}
+#game_battle {
 
-.game2{
-    margin-top: 40%;
-}
+  position: relative;
+  width: 70%;
 
-.container-battle{
+  .player-1 {
+  }
+
+  .player-2 {
+    float: right;
+  }
+
+  .battle-board {
+    float: right;
+    margin-right: 12%;
+  }
+
+  .slot-player.player-1 {
+
     position: relative;
+    width: 280px;
+    height: 300px;
+    background: #D8D8D8;
+    border: solid 2px gray;
+
+    .player-profile {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background: url(/build/images/empty-char.png) no-repeat;
+    }
+
+    .player-login {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .slot-player.player-2 {
+
+    position: relative;
+    width: 280px;
+    height: 300px;
+    background: #D8D8D8;
+    border: solid 2px gray;
+
+    .player-profile {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: url(/build/images/empty-char.png) no-repeat;
+    }
+
+    .player-login {
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  .slot-cards {
+
+    .cards {
+      position: relative;
+      left: 150px;
+      top: 50px;
+      width: 99px;
+      height: 144px;
+      background: url(/build/images/jeu-carte-1280x715.png) -197px -572px;
+    }
+  }
 }
 
-.container-battle .card-1{
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    overflow: hidden;
-}
-
-.container-battle .card-2{
-    position: absolute;
-    bottom: 200px;
-    right: 100px;
-    overflow: hidden;
-}

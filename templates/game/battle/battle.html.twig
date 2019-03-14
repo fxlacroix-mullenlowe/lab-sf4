@@ -4,21 +4,29 @@
 
     <h3>Battle</h3>
 
-    <div id="game_battle" class="row" style="padding: 20px;">
-        <div class="col-md-1 package game1" style="margin-left: 150px;">
-            {% for card in cards.package %}
-                <div class="card" attr-value="{{ card }}"></div>
-            {% endfor %}
+    <div id="game_battle" class="row">
+
+        <div class="slot-player player-2">
+            <div class="player-login">player 2</div>
+            <div class="player-profile"></div>
+            <br class="clearfix" />
+            <br class="clearfix" />
+
+
+            <div class="slot-cards"> </div>
         </div>
-        <div class="container-battle col-md-5">
-            <div class="card-1"></div>
-            <div class="card-2"></div>
+
+        <div class="slot-player battle-board"></div>
+
+        <div class="slot-player player-1">
+            <div class="player-login">player 1</div>
+            <div class="player-profile"></div>
+            <br class="clearfix" />
+            <br class="clearfix" />
+
+            <div class="slot-cards"></div>
         </div>
-        <div class="col-md-1 package game2">
-            {% for card in cards.package|reverse %}
-                <div class="card" attr-value="{{ card }}"></div>
-            {% endfor %}
-        </div>
+
     </div>
 
 {% endblock %}

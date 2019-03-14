@@ -1,5 +1,5 @@
 // modules function
-$('.game1 .card').click(function(){
+$('.game1 .card titi').click(function(){
 
     var $child1 = $('.game1 .card').first();
     var $card1 = $child1.attr("attr-value");

@@ -13,10 +13,15 @@ require('bootstrap');
 require('./utils/prototype');
 require('./utils/function');
 require('./utils/tool');
+
 require('./jquery/analyzer/analyzer');
 require('./jquery/card/battle');
 
 const Package = require('./jquery/card/package');
 
 var packages = new Package();
-console.log(packages.generatePackage().mix());
+packages
+    .generatePackage()
+    .mix()
+    .distribute();
+
